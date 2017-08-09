@@ -166,149 +166,270 @@ var str = "Hello, playground"
 //  print("이식불가")
 //}
 
-let anyVal = ("홍길동",23,170.35,"0105555555")
-anyVal.0
-anyVal.1
-anyVal.2
-anyVal.3
+//let anyVal = ("홍길동",23,170.35,"0105555555")
+//anyVal.0
+//anyVal.1
+//anyVal.2
+//anyVal.3
+//
+//
+//let person1:(String,Int,String) = ("김철수",22,"010")
+//
+//
+//let (name,age,phone) = person1
+//
+//name
+//age
+//phone
+//
+//
+//var arr1 = Array<String>()
+//var arr4 = [String]()
+//
+//
+//
+//var fruits = ["사관","바나나","딸기"]
+//
+//print("과일의 수는 \(fruits.count) 개입니다.");
+//
+//fruits.append("포토")
+//
+//print("과일의 수는 \(fruits.count) 개입니다.");
+//
+//
+//     fruits.insert("망고", at: 0)
+//
+//    fruits.append(contentsOf: ["멜론","사과"])
+//
+//for fruit in fruits
+//{
+//    print(fruit)
+//}
+//
+//
+//
+//if fruits.isEmpty {
+//    print("과일이 없습니다");
+//    
+//}
+//
+//fruits
+//fruits[0] = "%%%"
+//fruits
+//fruits[1...2] = ["####","$$$$"]
+//fruits
+//fruits[4...6] = ["----"]
+//fruits
+//
+//
+//
+//var dic1:Dictionary<String,Int>
+//var dic2:[String:AnyObject]
+//
+//
+//dic1 = Dictionary()
+//dic1 = Dictionary<String,Int>()
+//dic2 = [String:AnyObject]()
+//dic2 = [:]
+//
+//
+//var person = ["name":"홍길동", "age":"23", "phone":"010"]
+//
+//var color = [String:Int]()
+//color["red"] = 23
+//color["green"] = 255
+//color["blue"] = 16
+//
+//var colorArr = [Int]()
+//colorArr = [Int]()
+//colorArr.append(23)
+//colorArr.append(255)
+//colorArr.append(16)
+//
+//print(color["red"])
+//
+//color.updateValue(1, forKey: "alpha")
+//print(color)
+//
+//
+//color["alpha"] = nil
+//
+//print(color)
+//
+//
+//
+//var station1:Set<String>
+//
+//station1 = []
+//station1 = ["강남역","교대역","잠실역"]
+//
+//
+//
+//var fruit:Set = ["딸기","바나나","수박"]
+//var station2 = Set<String>()
+//
+//
+//station2.insert("을지로 입구")
+//station2.insert("서울역")
+//
+//
+//if station2.isEmpty{
+//    
+//    print("빈 Set 입니다")
+//}
+//
+//
+//station2.remove("서울역")
+//print(station2)
+//
+//
+//
+//
+//var team1:Set = ["김철수","홍길동"]
+//var team2:Set = ["박수홍","김철수","고길동"]
+//
+//team1.intersection(team2)
+//team1.symmetricDifference(team2)
+//team1.union(team2)
+//team1.subtract(team2)
+//
+//
+//
+//var colorA:Set = ["Black","Brown","Yellow","Blue","White"]
+//
+//var colorB:Set = ["Yellow","White"]
+//
+//colorB.isSubset(of: colorA)
+//
+//colorA.isSuperset(of: colorB)
+//
+//colorB.isStrictSubset(of: colorA)
+//colorA.isDisjoint(with: colorB)
+//
+//
+//
+//
+//
+//let firstName = "홍길동" : String?
+//frrstName = "길동"
+//
+//
+//let lasstName:String?
+//lasstName ="홍"
+//
+//var fullName.String =lasstName!+firstName
 
 
-let person1:(String,Int,String) = ("김철수",22,"010")
-
-
-let (name,age,phone) = person1
-
-name
-age
-phone
-
-
-var arr1 = Array<String>()
-var arr4 = [String]()
 
 
 
-var fruits = ["사관","바나나","딸기"]
 
-print("과일의 수는 \(fruits.count) 개입니다.");
+//
+//
+//var age:Int? = 30
+//
+//if age == 30 {
+//    print("30살 입니다.")
+//}
+//
+//
 
-fruits.append("포토")
 
-print("과일의 수는 \(fruits.count) 개입니다.");
+//func helloWorld(){
+//    
+//    print("Hello, World!")
+//}
+//
+//helloWorld()
+//
+//
+//func getDate() -> String {
+//    
+//    return "2017-01-02"
+//}
+//
+//var date = getDate()
+//
+//func setUser(username:String) {
+//    print("\(username)님 환영합니다.")
+//}
+//
+//setUser(username: "홍길동")
+//
+//func add (firstNum:Int, secondNum:Int) -> Int {
+//    
+//    return firstNum + secondNum
+//}
+//
+//
+//var result = add(firstNum: 1, secondNum: 2)
+//
+//
+//func getNameAndAge() -> (String,Int){
+//    return ("홍길동",22)
+//}
+//
+//let(name,age) = getNameAndAge()
+//
+//
+//
+//typealias size = (Int, Int)
+//
+//func getSize() -> size {
+//     return (200, 100)
+//}
+//
+//print(getSize())
+//
+//
+//
+//func addUser(name userName:String, id userId:String, email userEmail:String)
+//{
+//    let param1 = userName
+//    let param2 = userId
+//    let Param3 = userEmail
+//}
+//
+//
+//addUser(name: "홍길동", id: "hong", email: "hong")
+//
+//func addPerson(_ name:String, _ id:String)
+//{
+//    let param1 = name
+//    let parma2 = id
+//}
+//
+//addPerson("홍길동", "hong")
 
-
-     fruits.insert("망고", at: 0)
-
-    fruits.append(contentsOf: ["멜론","사과"])
-
-for fruit in fruits
+func average(user:String, scores:Int...)
 {
-    print(fruit)
-}
-
-
-
-if fruits.isEmpty {
-    print("과일이 없습니다");
+    var tot:Int = 0
+    
+    for score in scores
+    {
+        tot += score
+    }
+    
+    let avg = tot / scores.count
+    print ("\(user)님의 평균은 \(avg)점 입니다")
+    
+    
     
 }
 
-fruits
-fruits[0] = "%%%"
-fruits
-fruits[1...2] = ["####","$$$$"]
-fruits
-fruits[4...6] = ["----"]
-fruits
+
+
+average(user: "hong", scores: 100, 100, 100, 90)
 
 
 
-var dic1:Dictionary<String,Int>
-var dic2:[String:AnyObject]
 
-
-dic1 = Dictionary()
-dic1 = Dictionary<String,Int>()
-dic2 = [String:AnyObject]()
-dic2 = [:]
-
-
-var person = ["name":"홍길동", "age":"23", "phone":"010"]
-
-var color = [String:Int]()
-color["red"] = 23
-color["green"] = 255
-color["blue"] = 16
-
-var colorArr = [Int]()
-colorArr = [Int]()
-colorArr.append(23)
-colorArr.append(255)
-colorArr.append(16)
-
-print(color["red"])
-
-color.updateValue(1, forKey: "alpha")
-print(color)
-
-
-color["alpha"] = nil
-
-print(color)
-
-
-
-var station1:Set<String>
-
-station1 = []
-station1 = ["강남역","교대역","잠실역"]
-
-
-
-var fruit:Set = ["딸기","바나나","수박"]
-var station2 = Set<String>()
-
-
-station2.insert("을지로 입구")
-station2.insert("서울역")
-
-
-if station2.isEmpty{
-    
-    print("빈 Set 입니다")
+func setNameAndAge(user:String, age:Int = 0)
+{
+    print ("\(user)님의 나이는 \(age) 입니다")
 }
 
 
-station2.remove("서울역")
-print(station2)
-
-
-
-
-var team1:Set = ["김철수","홍길동"]
-var team2:Set = ["박수홍","김철수","고길동"]
-
-team1.intersection(team2)
-team1.symmetricDifference(team2)
-team1.union(team2)
-team1.subtract(team2)
-
-
-
-var colorA:Set = ["Black","Brown","Yellow","Blue","White"]
-
-var colorB:Set = ["Yellow","White"]
-
-colorB.isSubset(of: colorA)
-
-colorA.isSuperset(of: colorB)
-
-colorB.isStrictSubset(of: colorA)
-colorA.isDisjoint(with: colorB)
-
-
-
-
-
-
+setNameAndAge(user: "홍길동")
+setNameAndAge(user: "홍길동", age: 20)
 
