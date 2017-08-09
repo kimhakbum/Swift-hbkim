@@ -208,4 +208,107 @@ for fruit in fruits
 
 
 
+if fruits.isEmpty {
+    print("과일이 없습니다");
+    
+}
+
+fruits
+fruits[0] = "%%%"
+fruits
+fruits[1...2] = ["####","$$$$"]
+fruits
+fruits[4...6] = ["----"]
+fruits
+
+
+
+var dic1:Dictionary<String,Int>
+var dic2:[String:AnyObject]
+
+
+dic1 = Dictionary()
+dic1 = Dictionary<String,Int>()
+dic2 = [String:AnyObject]()
+dic2 = [:]
+
+
+var person = ["name":"홍길동", "age":"23", "phone":"010"]
+
+var color = [String:Int]()
+color["red"] = 23
+color["green"] = 255
+color["blue"] = 16
+
+var colorArr = [Int]()
+colorArr = [Int]()
+colorArr.append(23)
+colorArr.append(255)
+colorArr.append(16)
+
+print(color["red"])
+
+color.updateValue(1, forKey: "alpha")
+print(color)
+
+
+color["alpha"] = nil
+
+print(color)
+
+
+
+var station1:Set<String>
+
+station1 = []
+station1 = ["강남역","교대역","잠실역"]
+
+
+
+var fruit:Set = ["딸기","바나나","수박"]
+var station2 = Set<String>()
+
+
+station2.insert("을지로 입구")
+station2.insert("서울역")
+
+
+if station2.isEmpty{
+    
+    print("빈 Set 입니다")
+}
+
+
+station2.remove("서울역")
+print(station2)
+
+
+
+
+var team1:Set = ["김철수","홍길동"]
+var team2:Set = ["박수홍","김철수","고길동"]
+
+team1.intersection(team2)
+team1.symmetricDifference(team2)
+team1.union(team2)
+team1.subtract(team2)
+
+
+
+var colorA:Set = ["Black","Brown","Yellow","Blue","White"]
+
+var colorB:Set = ["Yellow","White"]
+
+colorB.isSubset(of: colorA)
+
+colorA.isSuperset(of: colorB)
+
+colorB.isStrictSubset(of: colorA)
+colorA.isDisjoint(with: colorB)
+
+
+
+
+
+
 
