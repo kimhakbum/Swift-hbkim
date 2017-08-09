@@ -183,3 +183,29 @@ age
 phone
 
 
+var arr1 = Array<String>()
+var arr4 = [String]()
+
+
+
+var fruits = ["사관","바나나","딸기"]
+
+print("과일의 수는 \(fruits.count) 개입니다.");
+
+fruits.append("포토")
+
+print("과일의 수는 \(fruits.count) 개입니다.");
+
+
+     fruits.insert("망고", at: 0)
+
+    fruits.append(contentsOf: ["멜론","사과"])
+
+for fruit in fruits
+{
+    print(fruit)
+}
+
+
+
+
