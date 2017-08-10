@@ -690,32 +690,5 @@ import Foundation
 //print(bmi)
 
 
-class Rectangle
-{
-    var x:Float
-    var y:Float
-    var height:Float
-    var width:Float
-    
-    init(x:Float, y:Float, width:Float, height:Float)
-    {
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-        
-    }
-    
-    func drawRectangle() {
-        print("사각형 그리기!")
-        print("X: \(self.x), Y: \(self.y), height: \(self.height), width: \(self.width) ")
-    }
-    
-
-}
-
-var rectangle = Rectangle(x: 10, y: 10, width: 100, height: 100)
-
-rectangle.drawRectangle()
 
 
