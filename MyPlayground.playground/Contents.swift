@@ -621,77 +621,101 @@ import Foundation
 
 
 
-class Person {
+//class Person {
+//    
+//    var name:String!
+//    var age :Int!
+//    
+//    func jump(){
+//        if self.age > 30 {
+//            print("\(self.name) 님 30cm 점프 !")
+//        }else{
+//            print("\(self.name) 님 1m 점프 !")
+//        }
+//        
+//    }
+//    
+//    func run() {
+//        if self.age > 30 {
+//            print("\(self.name) 님 느리게 달림 !")
+//        }else{
+//            print("\(self.name) 님 매우 빠르게 달림 !")
+//        }
+//    }
+//
+//
+//static let maxAge = 100
+//
+//
+//
+//class func calcBMI(height:Int, weight:Int) -> String {
+//    
+//    let result = Float(weight) / (Float(height * height) * 0.0001)
+//    let returnMsg:String
+//    
+//    
+//    print(result)
+//    
+//    
+//    if result >= 24.9 {
+//        returnMsg = "비만"
+//    }else if result >= 22.9 && result <= 24.9{
+//        returnMsg = "과체중"
+//    }else if result >= 18.5 && result <= 22.9{
+//        returnMsg = "정상"
+//    }else if result >= 22.9 && result <= 24.9{
+//        returnMsg = "과체중"
+//    }else if result < 18.5{
+//        returnMsg = "저체중"
+//    }else {
+//        returnMsg = "에러"
+//    }
+//    
+//    return returnMsg
+//    
+//}
+//}
+//
+//
+//let p = Person()
+//p.age = 30
+//p.name = "홍길동"
+//
+//p.run()
+//p.jump()
+//
+//
+//let bmi = Person.calcBMI(height: 170, weight: 72)
+//
+//print(bmi)
+
+
+class Rectangle
+{
+    var x:Float
+    var y:Float
+    var height:Float
+    var width:Float
     
-    var name:String!
-    var age :Int!
-    
-    func jump(){
-        if self.age > 30 {
-            print("\(self.name) 님 30cm 점프 !")
-        }else{
-            print("\(self.name) 님 1m 점프 !")
-        }
+    init(x:Float, y:Float, width:Float, height:Float)
+    {
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
         
     }
     
-    func run() {
-        if self.age > 30 {
-            print("\(self.name) 님 느리게 달림 !")
-        }else{
-            print("\(self.name) 님 매우 빠르게 달림 !")
-        }
-    }
-
-
-static let maxAge = 100
-
-
-
-class func calcBMI(height:Int, weight:Int) -> String {
-    
-    let result = Float(weight) / (Float(height * height) * 0.0001)
-    let returnMsg:String
-    
-    
-    print(result)
-    
-    
-    if result >= 24.9 {
-        returnMsg = "비만"
-    }else if result >= 22.9 && result <= 24.9{
-        returnMsg = "과체중"
-    }else if result >= 18.5 && result <= 22.9{
-        returnMsg = "정상"
-    }else if result >= 22.9 && result <= 24.9{
-        returnMsg = "과체중"
-    }else if result < 18.5{
-        returnMsg = "저체중"
-    }else {
-        returnMsg = "에러"
+    func drawRectangle() {
+        print("사각형 그리기!")
+        print("X: \(self.x), Y: \(self.y), height: \(self.height), width: \(self.width) ")
     }
     
-    return returnMsg
-    
-}
+
 }
 
+var rectangle = Rectangle(x: 10, y: 10, width: 100, height: 100)
 
-let p = Person()
-p.age = 30
-p.name = "홍길동"
-
-p.run()
-p.jump()
-
-
-let bmi = Person.calcBMI(height: 170, weight: 72)
-
-print(bmi)
-
-
-
-
-
+rectangle.drawRectangle()
 
 
