@@ -401,35 +401,297 @@ var str = "Hello, playground"
 //
 //addPerson("홍길동", "hong")
 
-func average(user:String, scores:Int...)
-{
-    var tot:Int = 0
+//func average(user:String, scores:Int...)
+//{
+//    var tot:Int = 0
+//    
+//    for score in scores
+//    {
+//        tot += score
+//    }
+//    
+//    let avg = tot / scores.count
+//    print ("\(user)님의 평균은 \(avg)점 입니다")
+//    
+//    
+//    
+//}
+//
+//
+//
+//average(user: "hong", scores: 100, 100, 100, 90)
+//
+//
+//
+//
+//func setNameAndAge(user:String, age:Int = 0)
+//{
+//    print ("\(user)님의 나이는 \(age) 입니다")
+//}
+//
+//
+//setNameAndAge(user: "홍길동")
+//setNameAndAge(user: "홍길동", age: 20)
+//
+//
+//func functionName(_ newName:String) -> String{
+//    //print("Hello, \(newName)")
+//    
+//    return "Hello, \(newName)"
+//}
+//
+//
+//let result = functionName("홍길동")
+//
+//print(result)
+//
+//
+//
+//
+//
+//
+//
+//func addNum(num1:inout Int, num2:Int)
+//{
+//    num1 = num1 + num2
+//}
+//
+//
+//var num:Int = 10
+//addNum(num1: &num, num2: 5)
+//print(num)
+//
+//
+//
+//
+//do{
+//    var age = 10
+//    do{
+//        var age = 20
+//        var name = "홍길동"
+//        print("Second age \(age)")
+//    }
+//}
+//
+//
+//
+//
+//struct Size{
+//    
+//    var width:Float
+//    var height:Float
+//    
+//    
+//    func description()
+//    {
+//        print("Width: \(self.width), Height: \(self.height)")
+//    }
+//}
+//
+//
+//var size2 = Size(width: 100, height: 200)
+//
+//size2.width = 300
+//size2.height = 300
+//
+//size2.description()
+//
+//
+//
+//
+//
+//var newSize:Size
+//
+//newSize = Size(width: 10, height: 10)
+//newSize.description()
+//
+//
+//
+//
+//
+//class Person {
+//    
+//    var name:String
+//    var email:String
+//    var age:Int
+//    
+//    init(name:String, email:String, age:Int) {
+//        self.name = name
+//        self.email = email
+//        self.age = age
+//    }
+//    
+//    func run()
+//    {
+//        print("RUN ~~")
+//    }
+//}
+//
+//var person1 = Person(name: "홍길동", email: "hong", age: 22)
+//
+//
+//
+//let person2 = Person(name: "김철수", email: "kim", age: 44)
+//
+//person2.age = 44
+//
+//dump(person2)
+
+
+import Foundation
+//
+//struct Person {
+//    var firstName:String
+//    var lastName:String
+//    
+//    var fullName:String {
+//        get {
+//            return firstName + "" + lastName
+//        }
+//        set {
+//            
+//            let index = newValue.index(newValue.startIndex, offsetBy:1)
+//            
+//            self.lastName = newValue.substring(to: index)
+//            self.firstName = newValue.substring(from: index)
+//        }
+//    }
+//    
+//}
+//
+//
+//var person1 = Person(firstName: "gildong", lastName: "hong")
+//
+//
+//person1.fullName = "김민수"
+//person1.firstName
+//person1.lastName
+//
+//
+//print(person1.fullName)
+
+
+//
+//struct Person {
+//    
+//   
+//    var age:Int?{
+//        
+//        
+//        willSet{
+//            if(age! > 18) {
+//                print("성인")
+//            }
+//            else{
+//                print("미성연자")
+//            }
+//        }
+//        
+//        didSet{
+//            
+//            if(age! > 18) {
+//                print("#성인")
+//            }
+//            else{
+//                print("##미성연자")
+//                age = nil
+//            }
+//        }
+//    }
+//}
+//
+//
+//
+//var person1 = Person(age: 18)
+//person1.age = 20
+//
+//
+//class Grade {
+//    
+//    static let mx:Float = 100
+//    
+//    class var min: Float {
+//        return mx * 0.2
+//    }
+//}
+//
+//
+//let maxGrade = Grade.mx
+//let minGrade = Grade.min
+
+
+
+class Person {
     
-    for score in scores
-    {
-        tot += score
+    var name:String!
+    var age :Int!
+    
+    func jump(){
+        if self.age > 30 {
+            print("\(self.name) 님 30cm 점프 !")
+        }else{
+            print("\(self.name) 님 1m 점프 !")
+        }
+        
     }
     
-    let avg = tot / scores.count
-    print ("\(user)님의 평균은 \(avg)점 입니다")
+    func run() {
+        if self.age > 30 {
+            print("\(self.name) 님 느리게 달림 !")
+        }else{
+            print("\(self.name) 님 매우 빠르게 달림 !")
+        }
+    }
+
+
+static let maxAge = 100
+
+
+
+class func calcBMI(height:Int, weight:Int) -> String {
+    
+    let result = Float(weight) / (Float(height * height) * 0.0001)
+    let returnMsg:String
     
     
+    print(result)
     
+    
+    if result >= 24.9 {
+        returnMsg = "비만"
+    }else if result >= 22.9 && result <= 24.9{
+        returnMsg = "과체중"
+    }else if result >= 18.5 && result <= 22.9{
+        returnMsg = "정상"
+    }else if result >= 22.9 && result <= 24.9{
+        returnMsg = "과체중"
+    }else if result < 18.5{
+        returnMsg = "저체중"
+    }else {
+        returnMsg = "에러"
+    }
+    
+    return returnMsg
+    
+}
 }
 
 
+let p = Person()
+p.age = 30
+p.name = "홍길동"
 
-average(user: "hong", scores: 100, 100, 100, 90)
-
-
-
-
-func setNameAndAge(user:String, age:Int = 0)
-{
-    print ("\(user)님의 나이는 \(age) 입니다")
-}
+p.run()
+p.jump()
 
 
-setNameAndAge(user: "홍길동")
-setNameAndAge(user: "홍길동", age: 20)
+let bmi = Person.calcBMI(height: 170, weight: 72)
+
+print(bmi)
+
+
+
+
+
+
 
