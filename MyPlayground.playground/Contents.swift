@@ -692,3 +692,37 @@ import Foundation
 
 
 
+class GYLabel {
+    
+    var text:String
+    
+    init() {
+        self.text = ""
+    }
+    
+    
+    func drawText() {
+        print("Lable Text = \(self.text)")
+    }
+    
+}
+
+
+class ViewController {
+    var titleLable:GYLabel
+    init() {
+        self.titleLable = GYLabel()
+        self.titleLable.drawText()
+    }
+    
+    func buttonClicked() {
+        self.titleLable.text = "Hello World"
+        self.titleLable.drawText()
+    }
+    
+}
+
+
+let vc = ViewController()
+vc.buttonClicked()
+
