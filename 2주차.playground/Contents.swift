@@ -146,3 +146,55 @@ person.getFullName()
 
 
 
+
+class MainViewController {
+    
+    var title:String = "Main View"
+    
+    func openSubView() {
+        let subVC = SubViewController()
+        
+        subVC.delegate = self
+        subVC.title = "서브화면"
+        subVC.open()
+        
+    }
+    
+    
+    func open() {
+        
+        print("\(self.title) 화면열기")
+    }
+    
+    func sendNewMessage(message:String) {
+        print("\(message)")
+    
+    }
+}
+
+
+class SubViewController {
+    var title:String = "Sub View"
+    var delegate:MainViewController?
+    
+    func open() {
+        
+        print("\(self.title) 화면열기")
+        
+        self.sendMessage()
+    }
+    
+    func sendMessage() {
+
+        
+        self.delegate?.sendNewMessage(message: "안녕하세요")
+    }
+
+}
+
+
+let mainVC = MainViewController()
+mainVC.open()
+mainVC.openSubView()
+
+
